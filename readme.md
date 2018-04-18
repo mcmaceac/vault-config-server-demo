@@ -1,15 +1,21 @@
 # HashiCorp Vault Setup
 
-Download from : https://www.vaultproject.io/downloads.html
+Download from : https://www.vaultproject.io/downloads.html 
 
 __run it in Dev mode__
 
 __#./vault server -dev -dev-root-token-id=00000000-0000-0000-0000-000000000000__
 
-Upon starting the vault server , you will see a line with the root_token value. 
+The v2 (part of Vault 10) KV store backend seems to breaks compatiblity .. you will need to re-create the /secret engine with the v1 KV store .. Run the following commands:
 
-Place it in your bootstrap.properties (in resource folder): 
+__
+./vault secrets disable secret
+./vault secrets enable -version=1 -path=secret kv
+./vault write secret/helloworld secret=sdfsdfsdfsdf
+__
 
-TO add a secret value to the Vault:
 
-__./vault kv put secret/helloworld secret=dsdfsdf__
+
+Note you can also access Vault via the GUI at :
+http://localhost:8200 (via browser)
+
