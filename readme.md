@@ -9,3 +9,7 @@ __#./vault server -dev -dev-root-token-id=00000000-0000-0000-0000-000000000000__
 Upon starting the vault server , you will see a line with the root_token value. 
 
 Place it in your bootstrap.properties (in resource folder): 
+
+TO add a secret value to the Vault:
+
+./vault kv put secret/helloworld secret=sdfs
