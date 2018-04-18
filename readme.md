@@ -12,4 +12,4 @@ Place it in your bootstrap.properties (in resource folder):
 
 TO add a secret value to the Vault:
 
-./vault kv put secret/helloworld secret=sdfs
+__./vault kv put secret/helloworld secret=dsdfsdf__
