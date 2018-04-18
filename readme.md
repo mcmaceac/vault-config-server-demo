@@ -17,6 +17,10 @@ __./vault write secret/helloworld secretmessage=sdfsdfsdfsdf__
 
 4. Run your Spring Boot App.
 
+5. To force a refresh of configuration variables hit the /refresh endpoint.
+
+__curl -X POST http://localhost:8080/actuator/refresh__
+
 Note you can also access Vault via the GUI at :
 http://localhost:8200 (via browser)
 
