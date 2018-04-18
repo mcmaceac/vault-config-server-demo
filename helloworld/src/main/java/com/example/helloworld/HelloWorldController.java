@@ -12,7 +12,7 @@ public class HelloWorldController {
     @Value("${helloworld.message}")
     private String message;
 
-    @Value("${secret}")
+    @Value("${secretmessage}")
     private String secret;
 
     @RequestMapping("hello")
